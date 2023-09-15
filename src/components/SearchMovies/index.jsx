@@ -12,8 +12,7 @@ export default function SearchMovies () {
     const search = async (event) => {
         event.preventDefault()
 
-        const url = `https://api.themoviedb.org/3/search/movie?api_key=892333b38298a8d638b9eabd918e31c0&language=en-US&query=${query}&page=1&include_adult=false`;
-
+        const url = `https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API}&language=en-US&query=${query}&page=1&include_adult=false`;
         try {
             const res = await fetch(url)
             const data = await res.json()
