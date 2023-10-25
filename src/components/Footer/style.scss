@@ -1,0 +1,21 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins";
+
+footer {
+  // background-color: variables.$secondary-color;
+  color: white;
+  margin-top: 20px;
+  margin-top: auto;
+
+  .info,
+  .legal {
+    @include mixins.center();
+    flex-direction: column;
+    
+
+    p,
+    small {
+      margin-bottom: 10px;
+    }
+  }
+}

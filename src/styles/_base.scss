@@ -1,0 +1,78 @@
+// Base styles
+@import "./variables"; // Import variables
+@import "./mixins";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family;
+  background-color: $primary-color;
+  background-image: radial-gradient(circle at center, #fb25c9, #273043 80%);
+
+  color: $font-color;
+
+
+
+}
+
+html, body {
+  // height: 100%;
+  // display:flex;
+  // justify-content: center;
+  // align-items:center;
+  
+}
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: darken(white, 30%);
+  }
+}
+
+
+main {
+  max-width:100%;
+  margin:0 auto;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  // Styles for mobile view go here
+  header {
+    // Change header to SVG or adjust styles for mobile
+  }
+}
+
+button {
+  
+    @include box-shadow(0px, 2px, 5px, black);
+  
+  
+}
+// main {
+//   width: 100%; /* Default width for extra small screens */
+
+//   @media (min-width: $breakpoint) {
+//     width: 50%; /* Adjust for small screens (sm) */
+//   }
+
+//   @media (min-width: $breakpoint) {
+//     width: 33.33%; /* Adjust for medium screens (md) */
+//   }
+// }
+
+//other global h1,h2,font-size, font-weight
+//default styles for form elements like button and inputs

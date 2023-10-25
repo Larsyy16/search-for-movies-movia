@@ -1,0 +1,140 @@
+// Header styles
+@use "../../styles/variables" as *;
+@use "../../styles/base";
+@use "../../styles/mixins";
+@font-face {
+  font-family: "ScriptoFont";
+  src: url("../../assets/scriptoFont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.header {
+  background-color: $secondary-color;
+  background-image: radial-gradient(ellipse farthest-corner at top right, #fb25c9, #273043 95%);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  // margin-bottom:200px;
+  // .logo {
+  //   @include mixins.center();
+  //   width: 200px;
+  //   height: 100px;
+  // }
+  h1 {
+    padding-left: 7px;
+    font-family: "ScriptoFont", sans-serif;
+    font-size: $main-font;
+    ;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+
+  .nav {
+    // @include mixins.center();
+    margin-left: auto;
+    .nav-list {
+      display: flex;
+      list-style: none;
+      height: 100%;
+
+      .nav-item {
+        margin: 0 10px;
+        .nav-link {
+          border-radius: 5px;
+          transition: background-color 0.3s;
+          display: flex;
+          align-items: center; /* Align h2 with h1 vertically */
+          height: 100%;
+
+          h2 {
+            border-radius: 5px;
+            text-align: end;
+            vertical-align: bottom;
+            margin: 0;
+            padding: 0 10px; /* Add padding to give some space between h2 and the border */
+
+            // &:hover {
+            //   background-color: variables.$primary-color;
+            // }
+          }
+        }
+      }
+    }
+  }
+
+  $breakpoint-mobile: 480px;
+
+  @media (max-width: 600px) {
+    justify-content: space-between; // Distribute space evenly between elements
+    margin: 0;
+    // padding:10px;
+    h1 {
+      order: 2; // Move to center
+    }
+
+    .mobileMenu {
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+    }
+
+    form {
+      order: 3; // Move to right side
+      width: 30%;
+      display: flex;
+      label {
+        display: none;
+      }
+      input {
+        // width: 80%;
+      }
+      // button {
+      //   background: none; // Remove button styles
+      //   border: none;
+      //   font-size: 0px;
+      //   margin-left: 10px;
+
+      //   &:before {
+      //     content: ""; // Empty content
+      //     display: block;
+      //     background: url("../../assets/magGlass.svg") no-repeat center; // Replace with magGlass.svg
+      //     background-size: 20px 20px; 
+      //     width: 20px; 
+      //     height: 20px; 
+      //   }
+      // }
+    }
+
+    .nav {
+      // order: 1; // Move to left side
+      margin-left: 0px;
+
+      .nav-list {
+        // padding-inline-start: 0px;
+        // .nav-item:first-child {
+        //   margin-right:0px;
+        //   .nav-link {
+        //     .home {
+        //       font-size:0;
+        //       &:before {
+        //         content: '';
+        //         display: block;
+        //         background: url('../../assets/menu.svg') no-repeat center;
+        //         background-size: 20px 20px;
+        //         width: 20px;
+        //         height: 20px;
+        //       }
+        //     }
+        //   }
+        // }
+        // .nav-item:not(:first-child) {
+        //   display:none;
+        display: none;
+      }
+    }
+  }
+}

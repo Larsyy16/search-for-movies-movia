@@ -1,0 +1,166 @@
+@use "../../styles/variables" as *;
+
+@font-face {
+  font-family: "FancyFont";
+  src: url("../../assets/fancy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.navMobile {
+  position:absolute;
+  background-color: rgba(15, 15, 15, 0.9);;
+  top:80px;
+  left:0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  // background-color: $navMobile-bg;
+  // &.active {
+  //   transform: translateX(0);
+  // }
+  z-index: 1000;
+  box-shadow:rgba(0, 0, 0, 0.35) 0px 8px 24px 0px;
+  max-height:100vh;
+  // min-width:290px;
+
+
+  .navMobileList {
+    // display: flex;
+    // flex-direction: column;
+    // list-style: none;
+    .navMobileitem {
+      // width: auto;
+      // height: auto;
+      // border-bottom: solid purple; 
+      .navMobileLink {
+  
+        // display: block;
+        // text-decoration: none;
+        padding: .5rem;
+        font-size:1rem;
+
+        h2 {
+
+          font-weight:100;
+          padding-left:5px;
+        }
+      }
+
+    }
+  }
+  
+
+  
+
+  
+}
+
+
+.homePageHeader {
+  font-family: $h1-font;
+  padding-left: 1rem;
+  font-size: $main-font;
+  padding-top: 1%;
+  color:white;
+
+
+
+  @media (max-width: $breakpoint-mobile) {
+    
+      font-family: $h1-font;
+      font-size: 10vw;
+      padding-top: 5%;
+    
+  
+  // .navMobile {
+  //   position:absolute;
+  //   background-color: white;
+  //   top:64px;
+  //   left:0px;
+  //   background-color: $navMobile-bg;
+  //   // &.active {
+  //   //   transform: translateX(0);
+  //   // }
+  //   z-index: 1000;
+  // }
+  
+  // Define a class for the navMobile list
+
+  
+  }
+
+}
+
+// .navMobile {
+//   position:absolute;
+//   background-color: white;
+//   top:65px;
+// }
+
+
+
+// .container {
+//     display: flex;
+//     padding: 0 55px;
+//   }
+
+//   .item {
+//     background: green;
+//     flex: 0 0 19.7%;
+//     text-align: center;
+//     margin: 0 2px;
+//     transition: transform 300ms ease 100ms;
+//   }
+
+//   .container:hover .item {
+//     transform: translateX(-25%);
+//  }
+
+//  .item:hover ~ .item {
+//     transform: translateX(25%);
+//  }
+
+//  .item:hover {
+//     transform: scale(1.5) !important;
+//   }
+
+//   .content {
+//     margin-top: 40px;
+//     height: 300px;
+//     position: relative;
+//   }
+
+//   .background {
+//     display: flex;
+//     height: 100%;
+//   }
+
+//   .left {
+//     background: black;
+//     width: 30%;
+//     position: relative;
+//   }
+
+//   .left:before {
+//     content: '';
+//     position: absolute;
+//     background-image: linear-gradient(to right,#000,transparent);
+//     top: 0;
+//     bottom: 0;
+//     left: 100%;
+//     width: 275px;
+//   }
+
+//   .right {
+//     background: green;
+//     width: 70%;
+//   }
+
+//   .content-container {
+//     color: white;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     padding: 30px
+//   }

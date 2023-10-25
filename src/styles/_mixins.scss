@@ -1,0 +1,21 @@
+// Mixins
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin responsive($property) {
+  @each $size in (xs, sm, md, lg) {
+    @media (min-width: $breakpoint) {
+      #{$property}: map-get($widths, $size);
+    }
+  }
+}
+
+
+@mixin box-shadow($x, $y, $blur, $color) {
+  -webkit-box-shadow: $x $y $blur $color;
+     -moz-box-shadow: $x $y $blur $color;
+          box-shadow: $x $y $blur $color;
+}
