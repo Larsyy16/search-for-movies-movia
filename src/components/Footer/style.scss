@@ -18,4 +18,12 @@ footer {
       margin-bottom: 10px;
     }
   }
+
+  @media (max-width: $breakpoint-mobile) {
+    // display:flex;
+    // flex-direction: column-reverse;
+    
+
+
+  }
 }
