@@ -8,7 +8,7 @@ import MobileSearch from '../MobileSearch'
 export default function Header({ menuButton, setMenuButton }) {
 
   return (
-
+    
     <>
       <header className="header">
         {/* <img src={logo} className="sitePicture" /> */}

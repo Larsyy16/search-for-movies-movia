@@ -10,7 +10,7 @@
   &__background__shadow,
   &__background__image,
   &__area {
-    // position: absolute;
+    position: absolute;
     top: 0;
     bottom: 0;
   }
@@ -99,7 +99,7 @@
     &__background__shadow,
     &__background__image,
     &__area {
-      // position: absolute;
+      position: static;
       // top: 0;
       // bottom: 0;
       // min-height: 100%; /* Set a minimum height */

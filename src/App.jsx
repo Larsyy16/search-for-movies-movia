@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import BackDrop from './BackDrop'
 import Layout from "./components/Layout";
 import { MenuProvider } from "./components/MenuContext";
-
+import SearchPage from "./pages/SearchPage";
 import Homepage from "./pages/Homepage";
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Homepage />} />
+            <Route path='SearchPage' element={<SearchPage/>}/>
           </Route>
         </Routes>
       </MenuProvider>
