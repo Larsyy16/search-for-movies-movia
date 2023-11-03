@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/index.scss";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 // import SearchMovies from './components/SearchMovies'
 // import Homepage from './pages/Homepage'
@@ -13,7 +13,7 @@ import Homepage from "./pages/Homepage";
 function App() {
   return (
     <>
-    <BrowserRouter>
+    <HashRouter>
       <MenuProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -22,7 +22,7 @@ function App() {
           </Route>
         </Routes>
       </MenuProvider>
-    </BrowserRouter>
+    </HashRouter>
     </>
   );
 }
