@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef } from "react";
 
 const MobileMenu = () => {
   const inputRef = useRef(null);
@@ -11,7 +11,11 @@ const MobileMenu = () => {
 
   return (
     <div>
-      <input type="text" ref={inputRef} placeholder="Click the button to move cursor" />
+      <input
+        type="text"
+        ref={inputRef}
+        placeholder="Click the button to move cursor"
+      />
       <button onClick={moveCursorToInput}>Move Cursor to Input</button>
     </div>
   );

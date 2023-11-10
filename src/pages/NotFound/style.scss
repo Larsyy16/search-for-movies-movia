@@ -1,0 +1,30 @@
+@use "../../styles/variables" as *;
+
+.notFoundContainer .link-button {
+  width: 100%;
+  background-color: #161616;
+  color: white;
+}
+
+.notFoundContainer {
+  padding-inline: 26px;
+  background-color: grey;
+  border-radius: 8px;
+
+  h3 {
+    padding-top: 1em;
+  }
+  .linkButton {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    padding: 0.75rem 1.375rem;
+    margin: 1em;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+    background-color: $primary-color;
+  }
+}

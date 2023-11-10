@@ -5,12 +5,6 @@ import menuSvg from "../../assets/menu.svg";
 import "./style.scss";
 
 export default function MobileMenu({ menuButton, setMenuButton }) {
-  // const [on, setOn] = useState(false)
-
-  // const menuButton = ()=> {
-  //   setOn(true)
-  //   console.log(on)
-  // }
 
   return (
     <>
@@ -30,7 +24,8 @@ export default function MobileMenu({ menuButton, setMenuButton }) {
           onClick={() => {
             setMenuButton(false);
           }}
-        className="settingsButtonClicked">
+          className="settingsButtonClicked"
+        >
           X
         </button>
       )}

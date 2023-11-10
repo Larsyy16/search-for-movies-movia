@@ -20,4 +20,3 @@ export default function Layout() {
     </MenuContext.Consumer>
   );
 }
-

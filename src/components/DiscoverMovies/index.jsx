@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "./style.css";
 
 export default function DiscoverMovies() {
   const [movies, setMovies] = useState([]);

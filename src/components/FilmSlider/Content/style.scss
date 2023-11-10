@@ -1,6 +1,5 @@
 @use "../../../styles/variables" as *;
 
-
 .content {
   position: relative;
   height: 37vw;
@@ -85,117 +84,62 @@
   }
 }
 
-// Use media queries to target different screen sizes
 @media (max-width: $breakpoint-mobile) {
-
-  
   .content {
     position: relative;
-    // min-height: 100%; /* Set a minimum height */
-    // max-height: 100%;
-    height:100%;
-  
+
+    height: 100%;
+
     &__background,
     &__background__shadow,
     &__background__image,
     &__area {
       position: static;
-      // top: 0;
-      // bottom: 0;
-      // min-height: 100%; /* Set a minimum height */
-      // max-height: 200%;
-      &__container{
-        padding-left:1rem;
+      &__container {
+        padding-left: 1rem;
         background-color: linear-gradient(to top, #000, transparent);
       }
     }
-  
+
     &__background {
-      // left: 0;
-      // right: 0;
-  
       &__shadow {
-        // display:none;
-        display:none;
+        display: none;
         background: #000;
         width: 30%;
-  
-        // &:before {
-        //   content: "";
-        //   position: absolute;
-        //   z-index: 10;
-        //   background-image: linear-gradient(to bottom, #000, transparent), linear-gradient(to top, #000, transparent);
-        //   top: 45%;
-        //   bottom: 0;
-        //   left: 0;
-        //   width: 100%;
-        //   height:30%;
-        // }
       }
-  
+
       &__image {
-        display:none;
-        // right: 0;
-        // width: 70%;
-        // height: 100%;
-        // background-position: center 10%;
-        // background-size: cover;
-        // z-index: 1;
-
-        
-
+        display: none;
       }
 
       &__mobileImage {
         width: 100%;
-        min-height:30vw;
+        min-height: 30vw;
         height: 150vw;
         background-position: center 10%;
         background-size: cover;
-        // background-image: linear-gradient(to bottom, #000, transparent),
       }
     }
-  
+
     &__area {
-      // left: 0;
-      // right: 0;
-      // height: 100%;
-      // z-index: 3;
-  
-      // &__container {
-      //   padding: 30px 70px;
-      //   color: wheat;
-      // }
-      display:flex;
+      display: flex;
       flex-direction: column;
     }
-  
+
     &__title {
       font-size: 45px;
       color: #fff;
       font-weight: 700;
-      display:none;
+      display: none;
     }
-  
+
     &__description {
       font-size: 18px;
       color: rgba(255, 255, 255, 0.8);
       margin-top: 20px;
       max-width: 500px;
-      font-weight:bold;
-      padding-top:2rem;
+      font-weight: bold;
+      padding-top: 2rem;
     }
-  
-    // &__close {
-    //   color: #fff;
-    //   width: 40px;
-    //   height: 40px;
-    //   background: transparent;
-    //   outline: none;
-    //   border: none;
-    //   position: absolute;
-    //   top: 30px;
-    //   right: 30px;
-    // }
   }
 }

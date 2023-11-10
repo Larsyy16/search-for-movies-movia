@@ -1,5 +1,4 @@
-// Base styles
-@import "./variables"; // Import variables
+@import "./variables";
 @import "./mixins";
 
 * {
@@ -14,95 +13,61 @@ body {
   background-image: radial-gradient(circle at center, #fb25c9, #273043 80%);
 
   color: $font-color;
-  
-
-
-
 }
 
-html, body {
-  // height: 100%;
-  // display:flex;
-  // justify-content: center;
-  // align-items:center;
-  
-}
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  &:hover {
-    color: darken(white, 30%);
-  }
-}
-
-
-main {
-  max-width:100%;
-  margin:0 auto;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
-
-@media (max-width: $breakpoint-mobile) {
-  html, body {
-    min-height: 100%; /* Set a minimum height */
-    max-height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    // max-height:1000px;
+html,
+body {
+  #root {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow:auto;
   }
-  
-  .content {
-    flex: 1;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      color: darken(white, 30%);
+    }
   }
-  
-  #root {
-  // Styles for mobile view go here
-  // min-height: 100%; /* Set a minimum height */
-  max-height: 100%;
-  header {
-    // Change header to SVG or adjust styles for mobile
-  }
+
   main {
-    min-height: 100%; /* Set a minimum height */
-    max-height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
   }
 
-  footer {
+  @media (max-width: $breakpoint-mobile) {
+    html,
+    body {
+      min-height: 100%;
+      max-height: 100%;
+      margin: 0;
+      padding: 0;
+    }
 
+    body {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+    }
+
+    .content {
+      flex: 1;
+    }
+
+    #root {
+      max-height: 100%;
+
+      main {
+        min-height: 100%;
+        max-height: 100%;
+      }
+    }
   }
-}
-}
-button {
-  
+  button {
     @include box-shadow(0px, 2px, 5px, black);
-  
-  
+  }
 }
-// main {
-//   width: 100%; /* Default width for extra small screens */
-
-//   @media (min-width: $breakpoint) {
-//     width: 50%; /* Adjust for small screens (sm) */
-//   }
-
-//   @media (min-width: $breakpoint) {
-//     width: 33.33%; /* Adjust for medium screens (md) */
-//   }
-// }
-
-//other global h1,h2,font-size, font-weight
-//default styles for form elements like button and inputs

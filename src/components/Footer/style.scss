@@ -2,7 +2,6 @@
 @use "../../styles/mixins";
 
 footer {
-  // background-color: variables.$secondary-color;
   color: white;
   margin-top: 20px;
   margin-top: auto;
@@ -11,19 +10,10 @@ footer {
   .legal {
     @include mixins.center();
     flex-direction: column;
-    
 
     p,
     small {
       margin-bottom: 10px;
     }
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    // display:flex;
-    // flex-direction: column-reverse;
-    
-
-
   }
 }
