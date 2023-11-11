@@ -25,3 +25,4 @@ NotNeeded/
 Genres/
 Favorites/
 .env
+tmdbAPI.js
