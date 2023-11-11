@@ -13,7 +13,6 @@ const Slider = ({ children, activeSlide }) => {
   const { width, elementRef } = UseSizeElement();
   const { handlePrev, handleNext, slideProps, containerRef, hasNext, hasPrev } =
     UseSliding(width, React.Children.count(children));
-  console.log(React.Children.count(children));
   const handleSelect = (movie) => {
     setCurrentSlide(movie);
   };

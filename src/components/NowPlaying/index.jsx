@@ -24,7 +24,6 @@ export default function DiscoverMovies() {
     fetchData();
   }, []);
 
-  console.log("disco");
   const nowPlayingMovies = movies.map((movie) => {
     return {
       id: movie.id,

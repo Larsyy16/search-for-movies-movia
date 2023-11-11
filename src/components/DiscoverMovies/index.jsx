@@ -25,7 +25,6 @@ export default function DiscoverMovies() {
     fetchData();
   }, []);
 
-  console.log("disco");
   const images = movies.map((movie) => {
     return {
       id: movie.id,
