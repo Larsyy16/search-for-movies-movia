@@ -4,7 +4,6 @@ import MovieDetail from "../../components/MovieDetail";
 import MobileMenuPopup from "../../components/MobileMenuPopup";
 
 export default function SearchPage({ setSearchPageState }) {
-  console.log("hi");
   const location = useLocation();
   const query = location.state.query;
   const [loading, setLoading] = useState(true);
