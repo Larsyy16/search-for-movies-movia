@@ -20,7 +20,7 @@ const Item = ({ movie }) => (
           >
             <img
               src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2${movie.image}`}
-              alt=""
+              alt={movie.title}
             />
             <ShowDetailsButton onClick={() => onSelectSlide(movie)} />
             {isActive && <Mark />}
