@@ -8,7 +8,7 @@ export default function NotFound() {
   return (
     <>
       <MobileMenuPopup />
-
+    <h1> About</h1>
       <section className="AboutContainer">
         <h3>
           This product uses the TMDB API but is not endorsed or certified by
