@@ -26,7 +26,7 @@
   //   width: 200px;
   //   height: 100px;
   // }
-  h1 {
+  span {
     padding-left: 7px;
     font-family: "ScriptoFont", sans-serif;
     font-size: $main-font;
@@ -52,18 +52,16 @@
           display: flex;
           align-items: center; /* Align h2 with h1 vertically */
           height: 100%;
-
-          h2 {
+          font-size:1.5rem;
             border-radius: 5px;
             text-align: end;
             vertical-align: bottom;
             margin: 0;
             padding: 0 10px; /* Add padding to give some space between h2 and the border */
-
             // &:hover {
             //   background-color: variables.$primary-color;
             // }
-          }
+          
         }
       }
     }

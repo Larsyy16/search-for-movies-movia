@@ -8,18 +8,18 @@ export default function Header({ menuButton, setMenuButton }) {
   return (
     <>
       <header className="header">
-        <h1>Movia</h1>
+        <span>Movia</span>
         <MobileMenu menuButton={menuButton} setMenuButton={setMenuButton} />
         <nav className="nav">
           <ul className="nav-list">
             <li className="nav-item">
               <Link to="./" className="nav-link">
-                <h2 className="home">Home </h2>
+                Home
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/About" className="nav-link">
-                <h2 className="About">About</h2>
+                About
               </Link>
             </li>
           </ul>
