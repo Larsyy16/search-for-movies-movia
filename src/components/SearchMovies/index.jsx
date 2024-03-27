@@ -1,7 +1,6 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import "./style.scss";
-import { useLocation, Navigate, Link } from "react-router-dom";
-import MovieDetail from "../MovieDetail";
+import {Link } from "react-router-dom";
 
 export default function SearchMovies() {
   const inputRef = useRef(null);

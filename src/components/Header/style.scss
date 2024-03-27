@@ -20,12 +20,7 @@
   flex-wrap: wrap;
   padding-top: 10px;
   padding-bottom: 20px;
-  // margin-bottom:200px;
-  // .logo {
-  //   @include mixins.center();
-  //   width: 200px;
-  //   height: 100px;
-  // }
+
   span {
     padding-left: 7px;
     font-family: "ScriptoFont", sans-serif;
@@ -37,7 +32,6 @@
   }
 
   .nav {
-    // @include mixins.center();
     margin-left: auto;
     .nav-list {
       display: flex;
@@ -50,18 +44,14 @@
           border-radius: 5px;
           transition: background-color 0.3s;
           display: flex;
-          align-items: center; /* Align h2 with h1 vertically */
+          align-items: center;
           height: 100%;
           font-size:1.5rem;
             border-radius: 5px;
             text-align: end;
             vertical-align: bottom;
             margin: 0;
-            padding: 0 10px; /* Add padding to give some space between h2 and the border */
-            // &:hover {
-            //   background-color: variables.$primary-color;
-            // }
-          
+            padding: 0 10px;
         }
       }
     }
@@ -70,11 +60,10 @@
   $breakpoint-mobile: 480px;
 
   @media (max-width: 600px) {
-    justify-content: space-between; // Distribute space evenly between elements
+    justify-content: space-between; 
     margin: 0;
-    // padding:10px;
     h1 {
-      order: 2; // Move to center
+      order: 2; 
       padding-left: 1em;
     }
 
@@ -82,60 +71,22 @@
       display: flex;
       align-items: center;
       padding-left: 10px;
-      // order: 1;
     }
 
     form {
-      order: 3; // Move to right side
+      order: 3;
       width: 30%;
       display: flex;
       label {
         display: none;
       }
-      input {
-        // width: 80%;
-      }
-      // button {
-      //   background: none; // Remove button styles
-      //   border: none;
-      //   font-size: 0px;
-      //   margin-left: 10px;
 
-      //   &:before {
-      //     content: ""; // Empty content
-      //     display: block;
-      //     background: url("../../assets/magGlass.svg") no-repeat center; // Replace with magGlass.svg
-      //     background-size: 20px 20px;
-      //     width: 20px;
-      //     height: 20px;
-      //   }
-      // }
     }
 
     .nav {
-      // order: 1; // Move to left side
       margin-left: 0px;
 
       .nav-list {
-        // padding-inline-start: 0px;
-        // .nav-item:first-child {
-        //   margin-right:0px;
-        //   .nav-link {
-        //     .home {
-        //       font-size:0;
-        //       &:before {
-        //         content: '';
-        //         display: block;
-        //         background: url('../../assets/menu.svg') no-repeat center;
-        //         background-size: 20px 20px;
-        //         width: 20px;
-        //         height: 20px;
-        //       }
-        //     }
-        //   }
-        // }
-        // .nav-item:not(:first-child) {
-        //   display:none;
         display: none;
       }
     }
