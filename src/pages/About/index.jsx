@@ -14,7 +14,7 @@ export default function NotFound() {
           This product uses the TMDB API but is not endorsed or certified by
           TMDB.
         </h2>
-        <img src={tmdbLogo}></img>
+        <img src={tmdbLogo} alt="TMDB logo"></img>
       </section>
     </>
   );
