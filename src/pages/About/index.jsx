@@ -10,10 +10,10 @@ export default function NotFound() {
       <MobileMenuPopup />
     <h1> About</h1>
       <section className="AboutContainer">
-        <h3>
+        <h2>
           This product uses the TMDB API but is not endorsed or certified by
           TMDB.
-        </h3>
+        </h2>
         <img src={tmdbLogo}></img>
       </section>
     </>
