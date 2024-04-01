@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import MovieDetail from "../../components/MovieDetail";
 import MobileMenuPopup from "../../components/MobileMenuPopup";
-
+import './style.scss'
 export default function SearchPage({ setSearchPageState }) {
   const location = useLocation();
   const query = location.state.query;
@@ -30,8 +30,9 @@ export default function SearchPage({ setSearchPageState }) {
   return (
     <>
       <MobileMenuPopup />
-      <div>
-        <h1>Results for {query}</h1>
+      <h1>Results for {query}</h1>
+
+      <div className="movieGroup">
         {loading ? <p>Loading...</p> : <MovieDetail movies={movies} />}
       </div>
     </>

@@ -1,3 +1,5 @@
+import "./style.scss";
+
 export default function SearchMovies({ movies }) {
   const movieElements = movies
     .filter((movie) => movie.poster_path)
