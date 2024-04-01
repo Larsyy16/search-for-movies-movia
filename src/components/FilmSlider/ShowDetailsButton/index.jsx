@@ -1,4 +1,3 @@
-import React from "react";
 import IconArrowDown from "../../../assets/IconArrowDown";
 import "./style.scss";
 

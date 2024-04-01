@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import IconCross from "../../../assets/IconCross";
 import "./style.scss";
 

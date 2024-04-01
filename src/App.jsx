@@ -1,4 +1,3 @@
-import React from "react";
 import "./styles/index.scss";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";

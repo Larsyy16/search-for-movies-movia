@@ -1,8 +1,6 @@
-import React, { useContext } from "react";
 import Slider from "../../components/FilmSlider";
 import DiscoverMovies from "../../components/DiscoverMovies";
 import NowPlaying from "../../components/NowPlaying";
-import { Link } from "react-router-dom";
 import MobileMenuPopup from "../../components/MobileMenuPopup";
 import "./style.scss";
 

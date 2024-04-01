@@ -1,11 +1,8 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import menuSvg from "../../assets/menu.svg";
 
 import "./style.scss";
 
 export default function MobileMenu({ menuButton, setMenuButton }) {
-
   return (
     <>
       {!menuButton && (

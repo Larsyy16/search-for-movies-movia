@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-
 export default function SearchMovies({ movies }) {
-
   const movieElements = movies
     .filter((movie) => movie.poster_path)
     .map((movie) => (

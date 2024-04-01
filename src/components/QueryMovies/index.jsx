@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useRef } from "react";
 
 export default async function QueryMovies(query) {
   const inputRef = useRef(null);
