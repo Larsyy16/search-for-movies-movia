@@ -1,17 +1,17 @@
 // styles.scss
 
-.card {
+.card { 
 
     position: relative;
     display:flex;
     min-height:100px;
     width:100%;
-    max-width:300px;
+    max-width:400px;
     height:100%;
     flex-direction:column;
     overflow:hidden;
     border-radius:0.75rem;
-    background-color: white;
+    background-color: rgb(245, 238, 238);
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
@@ -20,24 +20,38 @@
             min-height: 438px;
         }
     }
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    margin-left: 1rem;
-    margin-right:1rem;
+    // padding-top: 0.5rem;
+    // padding-bottom: 0.5rem;
+    padding:2rem;
+    // margin-left: 1rem;
+    // margin-right:1rem;
+    // margin-t
+    margin:1rem;
     
 
 
     &--image {
+      border-radius:.75rem;
     }
   
     &--content {
       color:black;
-      height:10rem;
+      height:12rem;
+      font-size:1rem;
+      overflow: hidden;
+      // text-overflow: ellipsis;
+
       
-      &--title {
-      }
+      // &--title {
+      // }
   
       &--desc {
+        max-height: 100px;
+        overflow: hidden;
+        font-size: 1rem;
+        line-height: 1.5;
+        text-overflow: ellipsis;
+
       }
     }
   }

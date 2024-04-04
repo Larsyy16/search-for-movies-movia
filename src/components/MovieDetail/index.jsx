@@ -11,14 +11,16 @@ export default function SearchMovies({ movies }) {
           alt={movie.title + " poster"}
         />
         <div className="card--content">
-          <h3 className="card--title">{movie.title}</h3>
-          <p>
+        <p>
             <small>RELEASE DATE: {movie.release_date}</small>
           </p>
           <p>
             <small>RATING: {movie.vote_average}</small>
           </p>
+          <h3 className="card--title">{movie.title}</h3>
+
           <p className="card--desc">{movie.overview}</p>
+          
         </div>
       </div>
     ));
