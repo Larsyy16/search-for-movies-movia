@@ -20,12 +20,7 @@
             min-height: 438px;
         }
     }
-    // padding-top: 0.5rem;
-    // padding-bottom: 0.5rem;
     padding:2rem;
-    // margin-left: 1rem;
-    // margin-right:1rem;
-    // margin-t
     margin:1rem;
     
 
@@ -39,20 +34,17 @@
       height:12rem;
       font-size:1rem;
       overflow: hidden;
-      // text-overflow: ellipsis;
-
-      
-      // &--title {
-      // }
+    }
+  }
   
-      &--desc {
+        .card--title {
+        margin:1rem;
+      }
+  
+      .card--desc {
         max-height: 100px;
         overflow: hidden;
         font-size: 1rem;
         line-height: 1.5;
         text-overflow: ellipsis;
-
       }
-    }
-  }
-  
