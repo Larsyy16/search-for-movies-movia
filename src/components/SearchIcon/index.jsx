@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./SearchIcon.scss"; // Import the SCSS file
+import "./SearchIcon.scss";
 
 const SearchIcon = () => {
   const [isSearchVisible, setIsSearchVisible] = useState(false);

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import MovieDetail from "../../components/MovieDetail";
 import MobileMenuPopup from "../../components/MobileMenuPopup";
-import './style.scss'
+import "./style.scss";
 export default function SearchPage({ setSearchPageState }) {
   const location = useLocation();
   const query = location.state.query;
