@@ -14,6 +14,10 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+  &:hover {
+    transform: scale(1.1); /* Scale up by 20% */
+  }
+
   @media (min-width: 768px) {
     .md\:min-h-\[438px\] {
       min-height: 438px;
@@ -31,6 +35,8 @@
     height: 12rem;
     font-size: 1rem;
     overflow: hidden;
+
+
   }
 }
 
@@ -44,4 +50,5 @@
   font-size: 1rem;
   line-height: 1.5;
   text-overflow: ellipsis;
+  
 }
