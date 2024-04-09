@@ -19,7 +19,7 @@ export default function SearchMovies({ movies }) {
           </p>
           <h3 className="card--title">{movie.title}</h3>
 
-          <p className="card--desc">{movie.overview}</p>
+          <p className="card--desc">{movie.overview ? movie.overview : "No description available"}</p>
         </div>
       </div>
     ));
