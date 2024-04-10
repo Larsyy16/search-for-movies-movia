@@ -11,6 +11,8 @@
 
   &:not(&--open) .item:hover .show-details-button {
     opacity: 1;
+    cursor: pointer;
+
   }
 
   &:not(&--open) .item:hover {
