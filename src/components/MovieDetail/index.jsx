@@ -1,16 +1,31 @@
 import "./style.scss";
+import {useState} from 'react'
 
 export default function SearchMovies({ movies }) {
+
+  const [toggleCard, setToggleCard] = useState(new Array(movies.length).fill(false))
+  function onClick(index) { 
+    const newToggleCard = [...toggleCard];
+    for (let i = 0; i < newToggleCard.length; i++) {
+      if (i !== index && newToggleCard[i] === true) {
+        newToggleCard[i] = false;
+      }
+    }
+    newToggleCard[index] = !newToggleCard[index];
+    setToggleCard(newToggleCard);
+  }
+
+
   const movieElements = movies
     .filter((movie) => movie.poster_path)
-    .map((movie) => (
-      <div className="card" key={movie.id}>
+    .map((movie, index) => (
+      <div className={`card ${toggleCard[index] ? 'activeCard' : ''}`} key={movie.id} onClick={() => onClick(index)}>
         <img
           className="card--image"
           src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
           alt={movie.title + " poster"}
         />
-        <div className="card--content">
+        <div className={`card--content ${toggleCard[index] ? 'activeContent' : ''}`}>
           <p>
             <small>RELEASE DATE: {movie.release_date}</small>
           </p>
