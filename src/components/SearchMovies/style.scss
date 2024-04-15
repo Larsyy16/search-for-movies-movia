@@ -13,13 +13,22 @@
     border: none;
     display: flex;
     align-items: center;
-    color: white;
+    color: light-dark(rgb(232, 240, 254)) !important;
     padding-left: 10px;
     margin-right: 0px;
     &::placeholder {
       color: #ccc;
       padding-left: 10px;
     }
+  }
+  /* Remove default autofill styles */
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  }
+
+  /* Remove autofill background color */
+  &:-internal-autofill-selected {
+    background-color: transparent !important;
   }
   input:focus {
     outline: none;
@@ -34,6 +43,7 @@
     border: none;
     box-shadow: none;
     border-radius: 50px;
+    background-color: (rgb(232, 240, 254)) !important
   }
   .buttonClick {
     background-color: white;
@@ -49,7 +59,7 @@
     border-radius: 0px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    background-color: $primary-color;
+    background-color: light-dark(rgb(232, 240, 254)) !important;
   }
 }
 
@@ -72,3 +82,5 @@
     }
   }
 }
+
+
