@@ -13,7 +13,7 @@
     border: none;
     display: flex;
     align-items: center;
-    color: light-dark(rgb(232, 240, 254)) !important;
+    background-color:rgb(232, 240, 254) !important;
     padding-left: 10px;
     margin-right: 0px;
     &::placeholder {
@@ -21,12 +21,7 @@
       padding-left: 10px;
     }
   }
-  /* Remove default autofill styles */
-  &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
-  }
 
-  /* Remove autofill background color */
   &:-internal-autofill-selected {
     background-color: transparent !important;
   }
@@ -43,10 +38,9 @@
     border: none;
     box-shadow: none;
     border-radius: 50px;
-    background-color: (rgb(232, 240, 254)) !important
   }
   .buttonClick {
-    background-color: white;
+    background-color: (rgb(232, 240, 254)) !important;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-top-right-radius: 50px;
