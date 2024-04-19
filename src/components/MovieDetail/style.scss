@@ -6,17 +6,13 @@
   min-height: 100px;
   width: 100%;
   max-width: 400px;
-  // height: 100%;
+  height: 100%;
   flex-direction: column;
-  // overflow: hidden;
   border-radius: 0.75rem;
   background-color: rgb(245, 238, 238);
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-  // &:hover {
-  //   transform: scale(1.1); 
-  // }
 
   @media (min-width: 768px) {
     .md\:min-h-\[438px\] {
@@ -37,9 +33,6 @@
     font-size: 1rem;
     overflow: hidden;
     text-overflow: ellipsis;
-
-
-
   }
 }
 
@@ -62,6 +55,29 @@ top: 50%;
 transform: translateY(-50%); 
 margin: 0 auto;
 z-index: 1; 
+
+.exitButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #555;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exitButton:hover {
+  background-color: grey;
+}
+
 }
 
 .activeContent{

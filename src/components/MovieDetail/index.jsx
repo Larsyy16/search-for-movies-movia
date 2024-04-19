@@ -3,6 +3,7 @@ import {useState} from 'react'
 
 export default function SearchMovies({ movies }) {
 
+  const [exitButton, setExitButton] = useState(false)
   const [toggleCard, setToggleCard] = useState(new Array(movies.length).fill(false))
   function onClick(index) { 
     const newToggleCard = [...toggleCard];
@@ -13,6 +14,7 @@ export default function SearchMovies({ movies }) {
     }
     newToggleCard[index] = !newToggleCard[index];
     setToggleCard(newToggleCard);
+    setExitButton(newToggleCard[index]);
   }
 
 
@@ -20,17 +22,23 @@ export default function SearchMovies({ movies }) {
     .filter((movie) => movie.poster_path)
     .map((movie, index) => (
       <div className={`card ${toggleCard[index] ? 'activeCard' : ''}`} key={movie.id} onClick={() => onClick(index)}>
-        <img
+
+{toggleCard[index] && (
+        <button className="exitButton" onClick={(e) => { e.stopPropagation(); onClick(index); }}>
+          X
+        </button>
+      )}
+            <img
           className="card--image"
           src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
           alt={movie.title + " poster"}
         />
         <div className={`card--content ${toggleCard[index] ? 'activeContent' : ''}`}>
           <p>
-            <small>RELEASE DATE: {movie.release_date}</small>
+            RELEASE DATE: {movie.release_date}
           </p>
           <p>
-            <small>RATING: {movie.vote_average}</small>
+          RATING: {movie.vote_average}
           </p>
           <h3 className="card--title">{movie.title}</h3>
 
@@ -40,3 +48,4 @@ export default function SearchMovies({ movies }) {
     ));
   return <>{movieElements}</>;
 }
+
