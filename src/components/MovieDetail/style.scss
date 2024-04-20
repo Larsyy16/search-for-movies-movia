@@ -13,6 +13,7 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+  cursor: pointer;
 
   @media (min-width: 768px) {
     .md\:min-h-\[438px\] {
@@ -24,7 +25,7 @@
 
   &--image {
     border-radius: 0.75rem;
-    height:50%;
+    height: 50%;
   }
 
   &--content {
@@ -43,44 +44,41 @@
 .card--desc {
   line-height: 1.6;
   white-space: wrap;
-
-  
 }
 
-.activeCard{
-position:absolute;
-left: 0;
-right: 0;
-top: 50%;
-transform: translateY(-50%); 
-margin: 0 auto;
-z-index: 1; 
-
-.exitButton {
+.activeCard {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: transparent;
-  color: #555;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: none;
-  outline: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.exitButton:hover {
-  background-color: grey;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  z-index: 1;
+
+  .exitButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .exitButton:hover {
+    background-color: grey;
+  }
 }
 
-}
-
-.activeContent{
-margin:2rem;
-height:100%;
+.activeContent {
+  margin: 2rem;
+  height: 100%;
 }

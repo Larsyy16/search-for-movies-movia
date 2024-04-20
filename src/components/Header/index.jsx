@@ -7,7 +7,7 @@ export default function Header({ menuButton, setMenuButton }) {
   return (
     <>
       <header className="header">
-        <span>Movia</span>
+        <Link to="/">Movia</Link>
         <MobileMenu menuButton={menuButton} setMenuButton={setMenuButton} />
         <nav className="nav">
           <ul className="nav-list">
