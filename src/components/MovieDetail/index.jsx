@@ -46,8 +46,8 @@ export default function SearchMovies({ movies }) {
             toggleCard[index] ? "activeContent" : ""
           }`}
         >
-          <p>RELEASE DATE: {movie.release_date}</p>
-          <p>RATING: {movie.vote_average}</p>
+          <p className="p-details">RELEASE DATE: {movie.release_date}</p>
+          <p className="p-details">RATING: {movie.vote_average}</p>
           <h3 className="card--title">{movie.title}</h3>
 
           <p className="card--desc">
