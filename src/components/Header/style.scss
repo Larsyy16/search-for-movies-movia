@@ -62,21 +62,30 @@
   @media (max-width: 600px) {
     justify-content: space-between;
     margin: 0;
-    span {
+    a {
       order: 2;
       padding-left: 1em;
     }
 
     .mobileMenu {
       display: flex;
+      order:1;
       align-items: center;
-      padding-left: 10px;
     }
 
     form {
       order: 3;
       width: 30%;
       display: flex;
+      input {
+        background-color: rgb(232, 240, 254) !important;
+        border:none;
+        margin-left:0px;
+        padding:0;
+      }
+      .buttonClick {
+        border:none;
+      }
       label {
         display: none;
       }
