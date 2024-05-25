@@ -2,7 +2,7 @@ import "./style.scss";
 import tmdbLogo from "../../assets/tmdbLogo.svg";
 import MobileMenuPopup from "../../components/MobileMenuPopup";
 
-export default function NotFound() {
+export default function About() {
   return (
     <>
       <MobileMenuPopup />
