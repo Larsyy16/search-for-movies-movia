@@ -8,13 +8,23 @@
   font-weight: normal;
   font-style: normal;
 }
-.header {
+
+.dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.light {
   background-color: $secondary-color;
   background-image: radial-gradient(
     ellipse farthest-corner at top right,
     #fb25c9,
     #273043 95%
   );
+
+}
+.header {
+
   color: white;
   display: flex;
   flex-wrap: wrap;
@@ -69,7 +79,7 @@
 
     .mobileMenu {
       display: flex;
-      order:1;
+      order: 1;
       align-items: center;
     }
 
@@ -79,12 +89,12 @@
       display: flex;
       input {
         background-color: rgb(232, 240, 254) !important;
-        border:none;
-        margin-left:0px;
-        padding:0;
+        border: none;
+        margin-left: 0px;
+        padding: 0;
       }
       .buttonClick {
-        border:none;
+        border: none;
       }
       label {
         display: none;

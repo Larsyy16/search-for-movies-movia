@@ -1,7 +1,7 @@
 import "./style.scss";
-export default function Footer() {
+export default function Footer({theme}) {
   return (
-    <footer>
+    <footer className={`${theme==='dark'? 'dark' : 'light'}`}>
       <p>
         {" "}
         <i>Developed by Larsyy</i>
