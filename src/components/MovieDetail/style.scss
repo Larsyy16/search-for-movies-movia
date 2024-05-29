@@ -1,86 +1,100 @@
 // styles.scss
 
 .card {
-  min-height: 100px;
-  max-width: 400px;
-  height: 100%;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
+  min-height: 100px;
+  width: 250px;
+  align-items: center;
   border-radius: 0.75rem;
   background-color: rgb(245, 238, 238);
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   cursor: pointer;
-
-  @media (min-width: 768px) {
-    .md\:min-h-\[438px\] {
-      min-height: 438px;
-    }
-  }
-  padding: 2rem;
+  padding: 0.5rem;
   margin: 1rem;
-
+  color: black;
   &--image {
-    border-radius: 0.75rem;
-    height: 50%;
+    max-width: 100%;
+    border-radius: 1rem;
   }
 
   &--content {
-    color: black;
-    height: 12rem;
-    font-size: 1rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    .p-details {
-      margin:5px;
+    &--title {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 1em;
     }
   }
 }
 
-.card--title {
-  margin: 1rem;
-}
+// @media (min-width: 768px) {
+//   .md\:min-h-\[438px\] {
+//     min-height: 438px;
+//   }
+// }
 
-.card--desc {
-  line-height: 1.6;
-  white-space: wrap;
-}
+// &--image {
+//   border-radius: 0.75rem;
+//   height: 50%;
+// }
 
-.activeCard {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  margin: 0 auto;
-  z-index: 1;
+// &--content {
+//   color: black;
+//   height: 12rem;
+//   font-size: 1rem;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
 
-  .exitButton {
-    position: relative;
-    top: 0;
-    left:90%;
-    width: 30px;
-    height: 30px;
-    border-radius: 25%;
-    background-color: transparent;
-    color: #555;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border: none;
-    outline: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow:none;
-  }
-  .exitButton:hover {
-    background-color: grey;
-  }
-}
+//   .p-details {
+//     margin: 5px;
+//   }
+// }
+// .card--title {
+//   margin: 1rem;
+// }
 
-.activeContent {
-  // margin: 2rem;
-  height: 100%;
-}
+// .card--desc {
+//   line-height: 1.6;
+//   white-space: wrap;
+// }
+
+// .activeCard {
+//   position: fixed;
+//   left: 0;
+//   right: 0;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   margin: 0 auto;
+//   z-index: 1;
+
+//   .exitButton {
+//     position: relative;
+//     top: 0;
+//     left: 90%;
+//     width: 30px;
+//     height: 30px;
+//     border-radius: 25%;
+//     background-color: transparent;
+//     color: #555;
+//     font-size: 16px;
+//     cursor: pointer;
+//     transition: background-color 0.3s ease;
+//     border: none;
+//     outline: none;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     box-shadow: none;
+//   }
+//   .exitButton:hover {
+//     background-color: grey;
+//   }
+// }
+
+// .activeContent {
+//   // margin: 2rem;
+//   height: 100%;
+// }

@@ -1,60 +1,57 @@
 import "./style.scss";
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
+
+const MovieDetailModal = lazy(() => import("../MovieDetailModal"))
 
 export default function SearchMovies({ movies }) {
-  const [exitButton, setExitButton] = useState(false);
-  const [toggleCard, setToggleCard] = useState(
-    new Array(movies.length).fill(false),
+  const [toggleCard, setToggleCard] = useState(null);
+  const [childData, setChildData] = useState(null);
+
+  const handleMovieClick = (movie) => {
+    setToggleCard(movie.id);
+  };
+
+  const onClose = () => {
+    setToggleCard(null);
+  };
+  const handleChildData = (data) => {
+    setChildData(data);
+    console.log("Data received from child:", data);
+  };
+
+  return (
+    <>
+      {movies
+        .filter((movie) => movie.poster_path)
+        .map((movie, index) => (
+          <div key={movie.id} className="card">
+            <img
+              className="card--image"
+              src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
+              alt={movie.title + " poster"}
+              onClick={() => handleMovieClick(movie)}
+            />
+            <div className="card--content">
+              <h3 className="card--content--title">{movie.title}</h3>
+              <p className="p-details">RATING: {movie.vote_average}</p>
+
+              <Suspense
+              fallback={<div> loading...</div>}
+              
+              >
+              {toggleCard === movie.id && (
+
+                <MovieDetailModal
+                  id={movie.id}
+                  movie={movie}
+                  onClose={onClose}
+                  sendDataToParent={handleChildData}
+                />
+              )}
+              </Suspense>
+            </div>
+          </div>
+        ))}
+    </>
   );
-  function onClick(index) {
-    const newToggleCard = [...toggleCard];
-    for (let i = 0; i < newToggleCard.length; i++) {
-      if (i !== index && newToggleCard[i] === true) {
-        newToggleCard[i] = false;
-      }
-    }
-    newToggleCard[index] = !newToggleCard[index];
-    setToggleCard(newToggleCard);
-    setExitButton(newToggleCard[index]);
-  }
-
-  const movieElements = movies
-    .filter((movie) => movie.poster_path)
-    .map((movie, index) => (
-      <div
-        className={`card ${toggleCard[index] ? "activeCard" : ""}`}
-        key={movie.id}
-        onClick={() => onClick(index)}
-      >
-        {toggleCard[index] && (
-          <button
-            className="exitButton"
-            onClick={(e) => {
-              onClick(index);
-            }}
-          >
-            X
-          </button>
-        )}
-        <img
-          className="card--image"
-          src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
-          alt={movie.title + " poster"}
-        />
-        <div
-          className={`card--content ${
-            toggleCard[index] ? "activeContent" : ""
-          }`}
-        >
-          <p className="p-details">RELEASE DATE: {movie.release_date}</p>
-          <p className="p-details">RATING: {movie.vote_average}</p>
-          <h3 className="card--title">{movie.title}</h3>
-
-          <p className="card--desc">
-            {movie.overview ? movie.overview : "No description available"}
-          </p>
-        </div>
-      </div>
-    ));
-  return <>{movieElements}</>;
 }
