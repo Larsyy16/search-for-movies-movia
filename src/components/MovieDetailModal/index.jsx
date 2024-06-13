@@ -17,7 +17,8 @@ export default function MovieDetailModal({ movie, onClose, sendDataToParent }) {
       {createPortal(
         <p className="card--desc">
           {movie.overview ? movie.overview : "No description available"},
-        </p>,document.getElementById("modal")
+        </p>,
+        document.getElementById("modal"),
       )}
       <button onClick={handleButtonClick}>Send Data to Parent</button>
     </div>

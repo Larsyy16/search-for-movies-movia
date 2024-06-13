@@ -1,7 +1,6 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixins";
 
-
 .dark {
   background-color: #333333;
   color: #ffffff;
@@ -14,13 +13,11 @@
     #fb25c9,
     #273043 95%
   );
-
 }
 footer {
   color: white;
   margin-top: 20px;
   margin-top: auto;
-  
 
   .info,
   .legal {

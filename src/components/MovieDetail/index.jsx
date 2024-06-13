@@ -1,7 +1,7 @@
 import "./style.scss";
 import { useState, lazy, Suspense } from "react";
 
-const MovieDetailModal = lazy(() => import("../MovieDetailModal"))
+const MovieDetailModal = lazy(() => import("../MovieDetailModal"));
 
 export default function SearchMovies({ movies }) {
   const [toggleCard, setToggleCard] = useState(null);
@@ -35,19 +35,15 @@ export default function SearchMovies({ movies }) {
               <h3 className="card--content--title">{movie.title}</h3>
               <p className="p-details">RATING: {movie.vote_average}</p>
 
-              <Suspense
-              fallback={<div> loading...</div>}
-              
-              >
-              {toggleCard === movie.id && (
-
-                <MovieDetailModal
-                  id={movie.id}
-                  movie={movie}
-                  onClose={onClose}
-                  sendDataToParent={handleChildData}
-                />
-              )}
+              <Suspense fallback={<div> loading...</div>}>
+                {toggleCard === movie.id && (
+                  <MovieDetailModal
+                    id={movie.id}
+                    movie={movie}
+                    onClose={onClose}
+                    sendDataToParent={handleChildData}
+                  />
+                )}
               </Suspense>
             </div>
           </div>
